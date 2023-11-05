@@ -9,6 +9,8 @@ export default function Tecnologias() {
       <p>Context API</p>
       <p>Redux</p>
       <p>React Testing Library</p>
+      <p>Tailwind CSS</p>
+      <p>CSS Modules</p>
       <p>Jest</p>
       <p>Mocha</p>
       <p>Chai</p>
@@ -20,9 +22,7 @@ export default function Tecnologias() {
       <p>Sequelize</p>
       <p>JWT</p>
       <p>Bcryp</p>
-      <p>Programação Orientada a Objetos</p>
-      <p>Redux</p>
-
+      <p>ESLint</p>
     </div>
   );
 }
