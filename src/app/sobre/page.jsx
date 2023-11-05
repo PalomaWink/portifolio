@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Sobre() {
   return (
     <div>
@@ -7,6 +9,7 @@ export default function Sobre() {
         <p>Iniciei meus estudos na Trybe em janeiro de 2023, onde mergulhei em um treinamento abrangente que abordou uma ampla gama de tecnologias, onde tive a oportunidade de desenvolver varios projetos, individuais e em grupo.</p>
         <p>Estou muito feliz para continuar minha evolução como desenvolvedora full-stack, trazendo minha paixão pela aprendizagem, resolução de problemas e dedicação para contribuir efetivamente em projetos desafiadores. Vamos construir o futuro da tecnologia juntos!</p>
       </section>
+      <Link href="/">Voltar para a Home</Link>
     </div>
   )
 }

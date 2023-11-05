@@ -5,6 +5,7 @@ export default function Contato() {
     <div>
       <h1>Entre em contato!</h1>
       <Link href="mailto:paloma.wink@hotmail.com" rel="noopener noreferrer" target="_blank">Say Hello</Link>
+      <Link href="/">Voltar para a Home</Link>
     </div>
   )
 }
