@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {
         'raleway': ['Raleway', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif']
-      }
-    }
+        'roboto': ['Roboto', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
