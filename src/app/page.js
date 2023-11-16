@@ -1,10 +1,6 @@
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <div>
         <h3>Olá! Meu nome é</h3>
         <h1>Paloma Wink</h1>
@@ -18,7 +14,6 @@ export default function Home() {
           transformar ideias em realidade.
         </p>
       </div>
-      <Footer />
     </main>
   )
 }

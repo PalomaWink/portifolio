@@ -3,6 +3,7 @@ import Image from "next/image";
 import react from '../../../public/tecnologias/react-logo-svgrepo-com.svg'
 import nextjs from '../../../public/tecnologias/next-js-svgrepo-com.svg'
 import typescript from '../../../public/tecnologias/typescript-icon-svgrepo-com.svg'
+import javascript from '../../../public/tecnologias/javascript-logo-svgrepo-com.svg'
 import redux from '../../../public/tecnologias/redux-logo-svgrepo-com.svg'
 import tailwind from '../../../public/tecnologias/tailwindcss-icon-svgrepo-com.svg'
 import jest from '../../../public/tecnologias/jest-svgrepo-com.svg'
@@ -16,34 +17,49 @@ import testingLibrary from '../../../public/tecnologias/testing-library-seeklogo
 import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
+import sinon from '../../../public/tecnologias/sinonJS.png'
 
 export default function Tecnologias() {
+
+  const tecnologias = [
+    {src: react, alt: "React"},
+    {src: nextjs, alt: "Next.JS"},
+    {src: typescript, alt: "TypeScript"},
+    {src: javascript, alt: "JavaScript"},
+    {src: redux, alt: "Redux"},
+    {src: tailwind, alt: "Tailwind CSS"},
+    {src: jest, alt: "Jest"},
+    {src: mocha, alt: "Mocha"},
+    {src: docker, alt: "Docker"},
+    {src: mysql, alt: "MySQL"},
+    {src: express, alt: "Express.JS"},
+    {src: sequelize, alt: "Sequelize"},
+    {src: eslint, alt: "ESLint"},
+    {src: testingLibrary, alt: "Testing Library"},
+    {src: jwt, alt: "JSON Web Token"},
+    {src: chai, alt: "Chai"},
+    {src: nodejs, alt: "Node.JS"},
+    {src: sinon, alt: "Sinon"},
+  ]
+  /* flex flex-wrap justify-between */
   return (
     <div>
-      <div>
-        <h1>Tecnologias</h1>
-        <Image src={react} width={100} alt="Logo React"/>
-        <Image src={nextjs} width={100} alt="Logo Next.JS"/>
-        <Image src={typescript} width={100} alt="Logo TypeScript"/>
-        <Image src={redux} width={100} alt="Logo Redux"/>
-        <Image src={tailwind} width={100} alt="Logo Tailwind CSS"/>
-        <Image src={jest} width={100} alt="Logo Jest"/>
-        <Image src={mocha} width={100} alt="Logo Mocha"/>
-        <Image src={docker} width={100} alt="Logo Docker"/>
-        <Image src={mysql} width={100} alt="Logo MySQL"/>
-        <Image src={express} width={100} alt="Logo Express.JS"/>
-        <Image src={sequelize} width={100} alt="Logo Sequelize"/>
-        <Image src={eslint} width={100} alt="Logo ESLint"/>
-        <Image src={testingLibrary} width={100} alt="Logo ESLint"/>
-        <Image src={jwt} width={100} alt="Logo JWT"/>
-        <Image src={chai} width={100} alt="Logo Chai"/>
-        <Image src={nodejs} width={100} alt="Logo Chai"/>
-
-        <p>CSS Modules</p>
-        <p>Sinon</p>
-        <p>Bcryp</p>
+        <h1 className="font-poppins text-4xl font-bold text-indigo-600 my-4 shadow-lg text-center">Tecnologias</h1>
+      <div className="grid grid-cols-6 ">
+        {
+          tecnologias.map((tecnologia, index) => (
+            <div key={index} className="border-2 border-indigo-600 m-3 p-10
+              rounded-lg shadow-lg transition duration-500 ease-in-out transform
+              hover:-translate-y-1 hover:scale-110">
+              <Image className="border-4 border-b-black-600 mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
+              <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
+            </div>
+          ))
+        }
       </div>
-      <Link href="/">Voltar para a Home</Link>
+      <div className="m-10 p-10 text-center">
+        <Link className="text-white bg-rose-400 p-5 rounded-lg hover:text-indigo-800 transition duration-300 ease-in-out" href="/">Voltar para a Home</Link>
+      </div>
     </div>
   );
 }
