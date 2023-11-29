@@ -1,8 +1,27 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import emBreve from "../../../public/em_breve.png";
+import Loading from "../components/Loading";
+import { useEffect, useState } from "react";
 
 export default function Projetos() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center">
+        <Loading />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <h1>Projetos</h1>

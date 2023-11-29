@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import react from '../../../public/tecnologias/react-logo-svgrepo-com.svg'
@@ -18,9 +19,26 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
-import Footer from "../components/Footer";
+import ButtonBackHome from "../components/botoes/ButtonBackHome";
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 export default function Tecnologias() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center">
+        <Loading />
+      </div>
+    );
+  }
 
   const tecnologias = [
     {src: react, alt: "React"},
@@ -45,11 +63,11 @@ export default function Tecnologias() {
   
   return (
     <div className="min-h-screen flex flex-col">
-        <h1 className="font-poppins text-4xl font-bold text-indigo-600 my-4 shadow-lg text-center">Tecnologias</h1>
+        <h1 className="font-poppins text-4xl font-bold text-black my-4 shadow-lg text-center">Tecnologias</h1>
       <div className="grid grid-cols-6 ">
         {
           tecnologias.map((tecnologia, index) => (
-            <div key={index} className="border-2 border-indigo-600 m-3 p-10
+            <div key={index} className="border-2 border-tertiary m-3 p-10
               rounded-lg shadow-lg transition duration-500 ease-in-out transform
               hover:-translate-y-1 hover:scale-110">
               <Image className="border-4 border-b-black-600 mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
@@ -59,7 +77,11 @@ export default function Tecnologias() {
         }
       </div>
       <div className="m-10 p-10 text-center">
-        <Link className="text-white bg-rose-400 p-5 rounded-lg hover:text-indigo-800 transition duration-300 ease-in-out" href="/">Voltar para a Home</Link>
+      <Link href="/">
+        <div className="mt-6">
+          <ButtonBackHome />
+        </div>
+      </Link>
       </div>
     </div>
   );
