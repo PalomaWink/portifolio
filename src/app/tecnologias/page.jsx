@@ -18,6 +18,7 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
+import Footer from "../components/Footer";
 
 export default function Tecnologias() {
 
@@ -41,9 +42,9 @@ export default function Tecnologias() {
     {src: nodejs, alt: "Node.JS"},
     {src: sinon, alt: "Sinon"},
   ]
-  /* flex flex-wrap justify-between */
+  
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
         <h1 className="font-poppins text-4xl font-bold text-indigo-600 my-4 shadow-lg text-center">Tecnologias</h1>
       <div className="grid grid-cols-6 ">
         {
