@@ -15,6 +15,11 @@ module.exports = {
       backgroundImage: {
         'bg-image': "url('../../public/Simple_Shiny.svg')",
       },
+      colors: {
+        'secundary': '#023047',
+        'tertiary': '#219ebc',
+        'quaternary': '#FFB703',
+      },
     },
   },
   plugins: [],
