@@ -29,3 +29,23 @@ Cor de Acento: Um tom de verde menta, que pode ser usado para botões de ação 
 Hex: #18C29C
 Classe Tailwind: bg-green-500
 Hex: #10B981
+
+Serifas Suaves:
+
+- Playfair Display: Uma fonte com serifa elegante, ótima para títulos e cabeçalhos.
+- Lora: Uma fonte com serifa balanceada, que funciona bem tanto para títulos quanto para texto corrido.
+
+Sem Serifa:
+
+- Open Sans: Uma fonte sem serifa versátil e legível, ideal para textos corporativos.
+- Montserrat: Moderna e geométrica, boa para cabeçalhos e elementos destacados.
+
+Estilo Caligráfico ou Script:
+
+- Pacifico: Uma fonte script casual, perfeita para adicionar um toque pessoal.
+- Dancing Script: Fluidez e informalidade, ótima para itens mais destacados ou assinaturas.
+
+Alternativas Artísticas:
+
+- Amatic SC: Uma fonte de estilo manuscrito, boa para adicionar um toque único e artístico.
+- Quicksand: Uma fonte geométrica com um toque suave, adequada para textos e títulos.
