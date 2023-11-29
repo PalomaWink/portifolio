@@ -12,6 +12,9 @@ module.exports = {
         'roboto': ['Roboto', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
       },
+      backgroundImage: {
+        'bg-image': "url('../../public/Simple_Shiny.svg')",
+      },
     },
   },
   plugins: [],

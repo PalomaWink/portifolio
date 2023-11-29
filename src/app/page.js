@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen">
       <div>
         <h3>Olá! Meu nome é</h3>
         <h1>Paloma Wink</h1>
