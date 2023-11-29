@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return(
-    <div className='grid grid-cols-3 bg-indigo-400 p-6 '>
+    <div className='grid grid-cols-3 p-6 '>
       <div className='col-span-1'>
         <p>PW</p>
       </div>

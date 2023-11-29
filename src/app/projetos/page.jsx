@@ -4,7 +4,7 @@ import emBreve from "../../../public/em_breve.png";
 
 export default function Projetos() {
   return (
-    <div>
+    <div className="min-h-screen">
       <h1>Projetos</h1>
       <Link href="/">Voltar para a Home</Link>
       <div className="container flex justify-around flex-wrap max-w-full max-h-full">
