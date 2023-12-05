@@ -19,26 +19,9 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
-import ButtonBackHome from "../components/botoes/ButtonBackHome";
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
 
 export default function Tecnologias() {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, [])
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center">
-        <Loading />
-      </div>
-    );
-  }
 
   const tecnologias = [
     {src: react, alt: "React"},
@@ -75,13 +58,6 @@ export default function Tecnologias() {
             </div>
           ))
         }
-      </div>
-      <div className="m-10 p-10 text-center">
-      <Link href="/">
-        <div className="mt-6">
-          <ButtonBackHome />
-        </div>
-      </Link>
       </div>
     </div>
   );
