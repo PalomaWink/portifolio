@@ -20,101 +20,325 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
+import { TfiGithub } from "react-icons/tfi"
 
 
 export default function Projetos() {
 
   return (
-    <div className="min-h-screen">
-      <h1>Projetos</h1>
-      <ul className="container flex justify-around flex-wrap max-w-full max-h-full">
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div>
-            <div className="p-2">
+    <div className="min-h-screen mt-32">
+      <h1 className="font-playfair text-4xl text-black my-4 titles text-center">Projetos</h1>
+      <ul className="flex justify-around flex-wrap max-w-full max-h-full">
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center">
+            <div className="text-center flex flex-col justify-center items-center space-y-1">
               <p>TrybeTunes</p>
-              <p>Em desenvolvimento</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
               <p>Aplicação desenvolvida para ouvir e curtir suas musicas favoritas, utilizando a api do ITunes</p>
-              <div className="flex flex-wrap">
-                <div>
-                  <Image src={ react } alt="Em breve projetos" className="w-5"/>
-                  <span>React</span>
-                </div>
-                <div>
-                  <Image src={ tailwind } alt="Em breve projetos" className="w-5"/>
-                  <span>Tailwind CSS</span>
-                </div>
-                <div>
-                  <Image src={ javascript } alt="Em breve projetos" className="w-5"/>
-                  <span>JavaScript</span>
-                </div>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
               </div>
             </div>
-            <div>
-              <p>Link para repositorio</p>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
             </div>
           </div>
         </li>
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div className="p-2">
-            <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
-          </div>
-          <div className="text-center flex flex-col justify-center">
-            <p>Nome do projeto</p>
-            <p>Descrição do projeto</p>
-            <p>Tecnologias utilizadas</p>
-            <p>Link para o projeto</p>
-            <p>Link para o repositório</p>
-          </div>
-        </li>
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div className="p-2">
-            <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
-          </div>
-          <div className="text-center flex flex-col justify-center">
-            <p>Nome do projeto</p>
-            <p>Descrição do projeto</p>
-            <p>Tecnologias utilizadas</p>
-            <p>Link para o projeto</p>
-            <p>Link para o repositório</p>
-          </div>
-        </li>
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div className="p-2">
-            <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
-          </div>
-          <div className="text-center flex flex-col justify-center">
-            <p>Nome do projeto</p>
-            <p>Descrição do projeto</p>
-            <p>Tecnologias utilizadas</p>
-            <p>Link para o projeto</p>
-            <p>Link para o repositório</p>
-          </div>
-        </li>
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div className="p-2">
-            <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
-          </div>
-          <div className="text-center flex flex-col justify-center">
-            <p>Nome do projeto</p>
-            <p>Descrição do projeto</p>
-            <p>Tecnologias utilizadas</p>
-            <p>Link para o projeto</p>
-            <p>Link para o repositório</p>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-2">
+              <p>Frontend Online Store</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Aplicação desenvolvida utilizando a api do Mercado Livre</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
           </div>
         </li>
-        <li className="conteiner bg-pink-500 w-2/4 m-4 flex max-h-96 max-w-xl rounded-md">
-          <div className="p-2">
-            <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-2">
+              <p>TrybeWallet</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Aplicação desenvolvida utilizando Redux</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={redux} alt="Redux" className="w-4"/>
+                <span>Redux</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
           </div>
-          <div className="text-center flex flex-col justify-center">
-            <p>Nome do projeto</p>
-            <p>Descrição do projeto</p>
-            <p>Tecnologias utilizadas</p>
-            <p>Link para o projeto</p>
-            <p>Link para o repositório</p>
+        </li>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-2">
+              <p>React Testing Library</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Testes criados para uma Pokedex</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
+                <span>RTL</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-1">
+              <p>Star Wars</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Aplicação desenvolvida com intuito de trabalhar com multiplos filtros, estados e criando custom hooks, utilizando ContextAPI</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
+                <span>RTL</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-1">
+              <p>App de Receitas</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Aplicação desenvolvida em grupo consumindo multiplas APIs</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
+                <span>RTL</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-1">
+              <p>Trivia</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Aplicação desenvolvida em grupo como se fosse um jogo do milhão</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={react} alt="React" className="w-4"/>
+                <span>React</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={tailwind} alt="Tailwind Css" className="w-4"/>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
+                <span>RTL</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={eslint} alt="Eslint" className="w-4"/>
+                <span>Eslint</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+          <div className="flex flex-col items-center w-full">
+            <div className="w-full">
+              <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
+            </div>
+            <div className="text-center flex flex-col justify-center items-center space-y-1">
+              <p>Store Manager</p>
+              <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
+                <p>Em desenvolvimento</p>
+              </div>
+              <p>Trabalhando com arquitetura de software, essa aplicação foi feita utilizando MSC (Model, Service, Controler)</p>
+            </div>
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={docker} alt="Docker" className="w-4"/>
+                <span>Docker</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={sequelize} alt="Sequelize" className="w-4"/>
+                <span>Sequelize</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={javascript} alt="JavaScript" className="w-4"/>
+                <span>JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={express} alt="Express" className="w-4"/>
+                <span>Express</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={mocha} alt="Mocha" className="w-4"/>
+                <span>Mocha</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={chai} alt="Chai" className="w-4"/>
+                <span>Chai</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={sinon} alt="Sinon" className="w-4"/>
+                <span>Sinon</span>
+              </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <Link href="/">
+                <TfiGithub size={40} />
+              </Link>
+            </div>
           </div>
         </li>
       </ul>

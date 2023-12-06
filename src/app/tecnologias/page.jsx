@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import Image from "next/image";
 import react from '../../../public/tecnologias/react-logo-svgrepo-com.svg'
 import nextjs from '../../../public/tecnologias/next-js-svgrepo-com.svg'
@@ -45,8 +44,12 @@ export default function Tecnologias() {
   ]
   
   return (
-    <div className="min-h-screen flex flex-col">
-        <h1 className="font-poppins text-4xl font-bold text-black my-4 shadow-lg text-center">Tecnologias</h1>
+    <div className="min-h-screen flex flex-col font-playfair">
+        <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-rose-400">
+          &lt;&nbsp;
+          Tecnologias
+          &frasl;&nbsp;&gt;
+        </h1>
       <div className="grid grid-cols-6 ">
         {
           tecnologias.map((tecnologia, index) => (
