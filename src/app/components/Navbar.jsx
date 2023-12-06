@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import { HiOutlineMail } from "react-icons/hi";
+import ThemeToggleButton from './Toggle';
 
 export default function Navbar() {
   return(
@@ -13,6 +14,7 @@ export default function Navbar() {
           <HiOutlineMail className='m-2' /> Contato
         </div>
       </Link>
+      <ThemeToggleButton />
     </div>
   )
 }
