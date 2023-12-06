@@ -18,11 +18,13 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Tecnologias() {
 
-
-  const tecnologias = [
+  const tecnologiasFront = [
     {src: react, alt: "React"},
     {src: nextjs, alt: "Next.JS"},
     {src: typescript, alt: "TypeScript"},
@@ -30,38 +32,71 @@ export default function Tecnologias() {
     {src: redux, alt: "Redux"},
     {src: tailwind, alt: "Tailwind CSS"},
     {src: jest, alt: "Jest"},
-    {src: mocha, alt: "Mocha"},
-    {src: docker, alt: "Docker"},
+    {src: eslint, alt: "ESLint"},
+    {src: testingLibrary, alt: "Testing Library"},
+    
+  ]
+
+  const tecnologiasBack = [
     {src: mysql, alt: "MySQL"},
     {src: express, alt: "Express.JS"},
     {src: sequelize, alt: "Sequelize"},
-    {src: eslint, alt: "ESLint"},
-    {src: testingLibrary, alt: "Testing Library"},
+    {src: mocha, alt: "Mocha"},
+    {src: docker, alt: "Docker"},
     {src: jwt, alt: "JSON Web Token"},
     {src: chai, alt: "Chai"},
     {src: nodejs, alt: "Node.JS"},
     {src: sinon, alt: "Sinon"},
   ]
-  
+
+  const settingsTop = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    rtl: true,
+    cssEase: "linear",
+  };
+
+  // Configurações para o segundo slider
+  const settingsBottom = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    rtl: false,
+    cssEase: "linear",
+  };
+
   return (
     <div className="min-h-screen flex flex-col font-playfair">
-        <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-rose-400">
-          &lt;&nbsp;
-          Tecnologias
-          &frasl;&nbsp;&gt;
-        </h1>
-      <div className="grid grid-cols-6 ">
-        {
-          tecnologias.map((tecnologia, index) => (
-            <div key={index} className="border-2 border-tertiary m-3 p-10
-              rounded-lg shadow-lg transition duration-500 ease-in-out transform
-              hover:-translate-y-1 hover:scale-110">
-              <Image className="border-4 border-b-black-600 mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
-              <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
-            </div>
-          ))
-        }
-      </div>
+      <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-rose-800">
+        &lt;&nbsp;
+        Tecnologias
+        &frasl;&nbsp;&gt;
+      </h1>
+      <Slider {...settingsTop}>
+        {tecnologiasFront.map((tecnologia, index) => (
+          <div key={index} className="border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg">
+            <Image className="mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
+            <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
+          </div>
+        ))}
+      </Slider>
+      <Slider {...settingsBottom}>
+        {tecnologiasBack.map((tecnologia, index) => (
+          <div key={index} className="border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg">
+            <Image className=" mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
+            <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
