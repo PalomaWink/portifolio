@@ -21,20 +21,59 @@ import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
 import { TfiGithub } from "react-icons/tfi"
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Projetos() {
 
+  useEffect(() => {
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    
+    });
+  }, [])
+
   return (
-    <div className="min-h-screen mt-32">
-      <h1 className="font-playfair text-4xl text-black my-4 titles text-center">Projetos</h1>
+    <div id="projetos" className="min-h-screen mt-20">
+      <h1 className="font-playfair titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800">
+        &lt;&nbsp;
+        Projetos
+        &frasl;&nbsp;&gt;
+      </h1>
       <ul className="flex justify-around flex-wrap max-w-full max-h-full">
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-1">
+            <div className="text-center flex flex-col justify-center items-center space-y-1 mt-5">
               <p>TrybeTunes</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -66,12 +105,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-2">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>Frontend Online Store</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -103,12 +150,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-2">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>TrybeWallet</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -144,12 +199,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-2">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>React Testing Library</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -169,12 +232,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-1">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>Star Wars</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -210,12 +281,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-1">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>App de Receitas</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -251,12 +330,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li 
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-1">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>Trivia</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
@@ -292,12 +379,20 @@ export default function Projetos() {
             </div>
           </div>
         </li>
-        <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
+        <li
+          className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center w-full">
             <div className="w-full">
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
-            <div className="text-center flex flex-col justify-center items-center space-y-1">
+            <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
               <p>Store Manager</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>

@@ -1,11 +1,14 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import home from '../../public/home.png'
 import Sobre from '../app/sobre/page'
 import Tecnologias from "./tecnologias/page";
 import Projetos from "./projetos/page";
+import ButtonBackHome from '../app/components/botoes/ButtonBackHome';
 import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
+import Contato from "./contato/page";
 
 export default function Home() {
   const el = useRef(null);
@@ -47,9 +50,15 @@ export default function Home() {
           <Image src={home} alt="Imagem de uma menina sentada usando notebook" className="w-full" />
         </div>
       </div>
+      <div className='fixed bottom-3 right-3 z-50'>
+        <Link href='/'>
+          <ButtonBackHome />
+        </Link>
+      </div>
       <Sobre />
       <Tecnologias />
       <Projetos />
+      <Contato />
     </main>
   )
 }

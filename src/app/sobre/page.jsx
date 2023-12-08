@@ -62,7 +62,7 @@ export default function Sobre() {
         <meta name="description" content="Página sobre mim do portfólio de Paloma Wink. Saiba mais sobre minha trajetória como desenvolvedora full-stack." />
         <meta name="keywords" content="desenvolvedora, full-stack, tecnologia, projetos" />
       </Head>
-      <section className="container flex mx-auto p-6 min-h-screen font-playfair">
+      <section id="sobre" className="container flex mx-auto p-6 min-h-screen font-playfair">
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center"
           data-aos="fade-up"

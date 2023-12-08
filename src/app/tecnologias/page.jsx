@@ -75,15 +75,15 @@ export default function Tecnologias() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-playfair">
-      <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-rose-800">
+    <div id="tecnologias" className="max-h-screen flex flex-col font-playfair">
+      <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800">
         &lt;&nbsp;
         Tecnologias
         &frasl;&nbsp;&gt;
       </h1>
       <Slider {...settingsTop}>
         {tecnologiasFront.map((tecnologia, index) => (
-          <div key={index} className="border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg">
+          <div key={index} className="font-playfair border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg">
             <Image className="mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
             <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
           </div>
@@ -91,7 +91,7 @@ export default function Tecnologias() {
       </Slider>
       <Slider {...settingsBottom}>
         {tecnologiasBack.map((tecnologia, index) => (
-          <div key={index} className="border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg">
+          <div key={index} className="border-2 border-tertiary m-3 p-2 rounded-lg shadow-lg ">
             <Image className=" mx-auto mb-4" src={tecnologia.src} alt={tecnologia.alt} width={100} height={100}/>
             <p className="text-center font-semibold text-lg">{tecnologia.alt}</p>
           </div>
