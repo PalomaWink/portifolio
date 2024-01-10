@@ -14,9 +14,8 @@ module.exports = {
         'playfair': ['Playfair Display', 'serif'],
       },
       backgroundImage: {
-        'bg-image': "url('../../public/5183000.jpg')",
-        'contact': 'url("../../public/oie_transparent.png")',
-        'others': 'url("../../public/oie_others.png")',
+        'light-mode': "url('../../public/5183000.jpg')",
+        'dark-mode': 'url("../../public/black.jpg")',
       },
       colors: {
         'secundary': '#89CFF0',

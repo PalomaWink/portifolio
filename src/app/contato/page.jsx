@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Contato() {
 
   return (
-    <div id="contato" className="max-h-screen flex flex-col items-center justify-center mt-10 mb-10">
-      <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800">
+    <div id="contato" className="max-h-screen flex flex-col items-center justify-center mt-10 mb-10 max-w-full">
+      <h1 className="w-full font-playfair titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800">
         &lt;&nbsp;
         Entre em contato
         &frasl;&nbsp;&gt;

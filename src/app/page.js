@@ -32,9 +32,9 @@ export default function Home() {
     <main className="min-h-screen text-black font-playfair">
       <div className="grid grid-cols-2 mt-10">
         <div className="col-span-1 p-10 text-center flex flex-col justify-center">
-          <h3 className="text-lg text-[#219ebc]">Olá! Meu nome é</h3>
-          <h1 className="text-4xl font-bold mt-2">Paloma Wink</h1>
-          <h2 className="text-3xl font-semibold text-[#023047] mt-1">
+          <h3 className="text-2xl text-[#219ebc]">Olá! Meu nome é</h3>
+          <h1 className="text-5xl font-bold mt-2">Paloma Wink</h1>
+          <h2 className="text-4xl font-semibold text-[#023047] mt-1">
             &lt;&nbsp;
             <span ref={el} />
             &frasl;&nbsp;&gt;
@@ -47,7 +47,7 @@ export default function Home() {
           </p>
         </div>
         <div className="col-span-1">
-          <Image src={home} alt="Imagem de uma menina sentada usando notebook" className="w-full" />
+          <Image src={home} alt="Imagem de uma menina sentada usando notebook" className="w-auto" />
         </div>
       </div>
       <div className='fixed bottom-3 right-3 z-50'>

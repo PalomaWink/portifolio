@@ -75,7 +75,7 @@ export default function Tecnologias() {
   };
 
   return (
-    <div id="tecnologias" className="max-h-screen flex flex-col font-playfair">
+    <div id="tecnologias" className="max-h-screen w-screen flex flex-col font-playfair">
       <h1 className="my-4 titles text-center text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800">
         &lt;&nbsp;
         Tecnologias
