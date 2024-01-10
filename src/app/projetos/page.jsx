@@ -242,7 +242,7 @@ export default function Projetos() {
               </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="https://github.com/PalomaWink/React-Testing-Library">
+              <Link href="https://github.com/PalomaWink/React-Testing-Library" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -295,7 +295,7 @@ export default function Projetos() {
               </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="https://github.com/PalomaWink/StarWars-Planets-Search">
+              <Link href="https://github.com/PalomaWink/StarWars-Planets-Search" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -348,7 +348,7 @@ export default function Projetos() {
               </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="https://github.com/PalomaWink/Recipes-App">
+              <Link href="https://github.com/PalomaWink/Recipes-App" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
