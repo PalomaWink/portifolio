@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { HiOutlineMail } from "react-icons/hi";
-import ThemeToggleButton from './botoes/Toggle';
+// import ThemeToggleButton from './botoes/Toggle';
 
 
 export default function Navbar() {
@@ -27,9 +27,9 @@ export default function Navbar() {
           <HiOutlineMail className='m-1' /> Contato
         </div>
       </Link>
-      <button type='button'>
+      {/* <button type='button'>
         <ThemeToggleButton  />
-      </button>
+      </button> */}
       
     </div>
   )
