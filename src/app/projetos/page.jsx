@@ -80,7 +80,7 @@ export default function Projetos() {
               </div>
               <p>Aplicação desenvolvida para ouvir e curtir suas musicas favoritas, utilizando a api do ITunes</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pr-4 pl-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -97,9 +97,13 @@ export default function Projetos() {
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/Trybetunes" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -125,7 +129,7 @@ export default function Projetos() {
               </div>
               <p>Aplicação desenvolvida utilizando a api do Mercado Livre</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pr-4 pl-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -142,9 +146,13 @@ export default function Projetos() {
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/FrontEnd-Online-Store" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -170,7 +178,7 @@ export default function Projetos() {
               </div>
               <p>Aplicação desenvolvida utilizando Redux</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pr-4 pl-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -191,9 +199,17 @@ export default function Projetos() {
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={testingLibrary} alt="RTL" className="w-4"/>
+                <span>Testing Library</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/TrybeWallet" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -219,14 +235,14 @@ export default function Projetos() {
               </div>
               <p>Testes criados para uma Pokedex</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pr-4 pl-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
-                <span>RTL</span>
+                <span>Testing Library</span>
               </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/React-Testing-Library">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -246,13 +262,13 @@ export default function Projetos() {
               <Image src={ emBreve } width={400} alt="Em breve projetos" height={400}/>
             </div>
             <div className="text-center flex flex-col justify-center items-center space-y-2 mt-5">
-              <p>Star Wars</p>
+              <p>Star Wars Planets Search</p>
               <div className="bg-secundary w-2/3 rounded-xl shadow-lg">
                 <p>Em desenvolvimento</p>
               </div>
               <p>Aplicação desenvolvida com intuito de trabalhar com multiplos filtros, estados e criando custom hooks, utilizando ContextAPI</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pr-4 pl-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pr-4 pl-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -267,15 +283,19 @@ export default function Projetos() {
               </div>
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
-                <span>RTL</span>
+                <span>Testing Library</span>
               </div>
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/StarWars-Planets-Search">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -301,7 +321,7 @@ export default function Projetos() {
               </div>
               <p>Aplicação desenvolvida em grupo consumindo multiplas APIs</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pl-4 pr-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -316,15 +336,19 @@ export default function Projetos() {
               </div>
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={testingLibrary} alt="React Testing Library" className="w-4"/>
-                <span>RTL</span>
+                <span>Testing Library</span>
               </div>
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/Recipes-App">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -350,7 +374,7 @@ export default function Projetos() {
               </div>
               <p>Aplicação desenvolvida em grupo como se fosse um jogo do milhão</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pl-4 pr-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={react} alt="React" className="w-4"/>
                 <span>React</span>
@@ -371,9 +395,13 @@ export default function Projetos() {
                 <Image src={eslint} alt="Eslint" className="w-4"/>
                 <span>Eslint</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/Trivia" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
@@ -399,7 +427,7 @@ export default function Projetos() {
               </div>
               <p>Trabalhando com arquitetura de software, essa aplicação foi feita utilizando MSC (Model, Service, Controler)</p>
             </div>
-            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-2 text-xs leading-3 pl-4 pr-4">
+            <div className="flex flex-wrap justify-around mt-8 gap-x-4 gap-y-3 text-xs leading-3 pl-4 pr-4">
               <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
                 <Image src={docker} alt="Docker" className="w-4"/>
                 <span>Docker</span>
@@ -428,9 +456,13 @@ export default function Projetos() {
                 <Image src={sinon} alt="Sinon" className="w-4"/>
                 <span>Sinon</span>
               </div>
+              <div className="flex items-center space-x-2 ring-2 ring-blue-500/50 border-2 rounded-lg p-1 shadow-md">
+                <Image src={nodejs} alt="Node.JS" className="w-4"/>
+                <span>Node.JS</span>
+              </div>
             </div>
             <div className="absolute bottom-4 right-4">
-              <Link href="/">
+              <Link href="https://github.com/PalomaWink/Store-Manager" target="_blank">
                 <TfiGithub size={40} />
               </Link>
             </div>
