@@ -18,7 +18,7 @@ export default function Navbar() {
   };
 
   return(
-    <div className="p-2 text-black shadow-md font-playfair flex justify-around items-center text-lg">
+    <nav className="p-2 text-black shadow-md font-playfair flex justify-around items-center text-lg">
       <Link onClick={(e) => handleScroll(e, 'sobre')} className='hover:text-tertiary hover:transition duration-300 hover:px-4 hover:py-2 hover:rounded-md hover:shadow-lg' href='#sobre'>Sobre mim</Link>
       <Link onClick={(e) => handleScroll(e, 'tecnologias')} className='hover:text-tertiary hover:transition duration-300 hover:px-4 hover:py-2 hover:rounded-md hover:shadow-lg' href='#tecnologias'>Tecnologias</Link>
       <Link onClick={(e) => handleScroll(e, 'projetos')} className='hover:text-tertiary hover:transition duration-300 hover:px-4 hover:py-2 hover:rounded-md hover:shadow-lg' href='#projetos'>Projetos</Link>
@@ -31,6 +31,6 @@ export default function Navbar() {
         <ThemeToggleButton  />
       </button> */}
       
-    </div>
+    </nav>
   )
 }
