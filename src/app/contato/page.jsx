@@ -1,7 +1,45 @@
 "use client";
 import Link from "next/link";
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
+import emailjs from '@emailjs/browser'
 
+
+const validacaoDeContatoSchema = z.object({
+  nome: z.string().min(3, 'O campo do nome é obrigatorio').max(255).transform(name => {
+    return name.trim().split(' ').map(word => {
+      return word[0].toLocaleUpperCase().concat(word.substring(1))
+    }).join(' ')
+  }),
+  email: z.string().email("Email inválido").min(10, "O campo do email é obrigatório").max(255).toLowerCase(),
+  mensagem: z.string().min(3, 'O campo da mensagem é obrigatorio').max(255),
+})
 export default function Contato() {
+
+  const { 
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: zodResolver(validacaoDeContatoSchema)
+  })
+
+  function onSubmitEmail(data) {
+    const templateParams = {
+      from_name: data.nome,
+      from_email: data.email,
+      message: data.mensagem,
+    }
+    emailjs.send("service_3nu36wu", "template_pxo1wuc", templateParams, "AqLuZzCqpb48hDAPj")
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      reset()
+    }, (err) => {
+      console.log('FAILED...', err);
+    })
+  }
 
   return (
     <div id="contato" className="max-h-screen flex flex-col items-center justify-center mt-10 mb-10 max-w-full">
@@ -10,46 +48,69 @@ export default function Contato() {
         Entre em contato
         &frasl;&nbsp;&gt;
       </h1>
-      <div className="relative rounded-lg w-1/2 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
-        <input placeholder="Name" className="relative bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm rounded-lg focus:ring-violet-500 placeholder-opacity-60 focus:border-violet-500 block w-full p-2.5 checked:bg-emerald-500" type="text"/>
-      </div>
-      <div className="relative rounded-lg w-1/2 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
-        <input placeholder="E-mail" className="relative bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm rounded-lg focus:ring-violet-500 placeholder-opacity-60 focus:border-violet-500 block w-full p-2.5 checked:bg-emerald-500" type="text"/>
-      </div>
-      <div className="relative rounded-lg w-1/2 h-32 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
-        <textarea placeholder="Message" className="relative h-32 bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm rounded-lg focus:ring-violet-500 placeholder-opacity-60 focus:border-violet-500 block w-full p-2.5 checked:bg-emerald-500" type="text"/>
-      </div>
-      <div className="ml-6 pl-6 mt-10">
-        <button className="button">
-          Enviar :)
-        <style jsx>{`
-          .button {
-            --bg: #000;
-            --hover-bg: #ff90e8;
-            --hover-text: #000;
-            color: #fff;
-            border: 1px solid var(--bg);
-            border-radius: 4px;
-            padding: 0.6em 3em;
-            background: var(--bg);
-            transition: 0.2s;
-            max-width: 100%;
-          }
+      <form
+        onSubmit={handleSubmit(onSubmitEmail)}
+        className="flex flex-col items-center justify-center w-full h-auto"
+      >
+        <div className="relative rounded-lg w-1/2 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
+          <input 
+            placeholder="Nome"
+            className="input_contact"
+            type="text"
+            {...register('nome')}
+          />
+          {errors.nome && <span className="text-red-600 text-sm">{errors.nome.message}</span>}
+        </div>
+        <div className="relative rounded-lg w-1/2 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
+          <input
+            placeholder="E-mail"
+            className="input_contact"
+            type="email"
+            {...register('email')}
+          />
+          {errors.email && <span className="text-red-600 text-sm">{errors.email.message}</span>}
+        </div>
+        <div className="relative rounded-lg w-1/2 h-32 overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:rounded-full before:blur-lg  after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:right-12 after:top-3 after:rounded-full after:blur-lg m-3">
+          <textarea 
+            placeholder="Mensagem"
+            className="input_contact h-32"
+            type="text"
+            {...register('mensagem')}
+          />
+          {errors.mensagem && <span className="text-red-600 text-sm">{errors.mensagem.message}</span>}
+        </div>
+        <div className="ml-6 pl-6 mt-10">
+          <button className="button" type="submit">
+            Enviar :)
+          <style jsx>{`
+            .button {
+              --bg: #000;
+              --hover-bg: #ff90e8;
+              --hover-text: #000;
+              color: #fff;
+              border: 1px solid var(--bg);
+              border-radius: 4px;
+              padding: 0.6em 3em;
+              background: var(--bg);
+              transition: 0.2s;
+              max-width: 100%;
+            }
 
-          .button:hover {
-            color: var(--hover-text);
-            transform: translate(-0.25rem,-0.25rem);
-            background: var(--hover-bg);
-            box-shadow: 0.25rem 0.25rem var(--bg);
-          }
+            .button:hover {
+              color: var(--hover-text);
+              transform: translate(-0.25rem,-0.25rem);
+              background: var(--hover-bg);
+              box-shadow: 0.25rem 0.25rem var(--bg);
+            }
 
-          .button:active {
-            transform: translate(0);
-            box-shadow: none;
-          }
-        `}</style>
-        </button>
-      </div>
+            .button:active {
+              transform: translate(0);
+              box-shadow: none;
+            }
+          `}</style>
+          </button>
+        </div>
+      </form>
     </div>
   )
 }
