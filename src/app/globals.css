@@ -22,3 +22,15 @@
     box-shadow: 0 20px 25px -5px rgb(251 113 133 / 0.1), 0 8px 10px -6px rgb(251 113 133 / 0.1);
   }
 }
+
+.input_contact {
+  @apply relative bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm rounded-lg placeholder-opacity-60 block w-full p-2.5;
+}
+
+.input_contact:focus {
+  @apply ring-violet-500 border-violet-500;
+}
+
+.input_contact:checked {
+  @apply bg-emerald-500;
+}
