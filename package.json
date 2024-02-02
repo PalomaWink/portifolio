@@ -9,16 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
+    "@hookform/resolvers": "^3.3.4",
     "aos": "^2.3.4",
     "eslint-config-trybe-fundamentals": "^1.1.1",
     "framer-motion": "^10.16.7",
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.50.0",
     "react-icons": "^4.12.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
