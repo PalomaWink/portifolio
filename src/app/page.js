@@ -47,7 +47,7 @@ export default function Home() {
           </p>
         </div>
         <div className="col-span-1">
-          <Image src={home} alt="Imagem de uma menina sentada usando notebook" className="w-auto" />
+          <Image src={home} alt="Imagem de uma menina sentada usando notebook" className="w-auto h-auto" priority />
         </div>
       </div>
       <div className='fixed bottom-3 right-3 z-50'>

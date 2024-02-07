@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
     <li className="m-4 flex h-[700px] max-w-xs rounded-md overflow-hidden cards relative">
       <div className="flex flex-col items-center w-full">
         <div className="w-full">
-          <Image src={project.image} width={400} alt={project.title} height={400} />
+          <Image src={project.image} alt={project.title} />
         </div>
         <div className="text-center flex flex-col justify-center items-center space-y-1 mt-5">
           <p>{project.title}</p>

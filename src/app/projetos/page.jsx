@@ -39,7 +39,7 @@ export default function Projetos() {
         &frasl;&nbsp;&gt;
       </h1>
       <ul 
-        className="flex justify-around flex-wrap max-w-full max-h-full"
+        className="flex justify-around flex-wrap max-w-full max-h-full m-5"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-delay="50"
@@ -52,7 +52,7 @@ export default function Projetos() {
         ))}
       </ul>
       <ul 
-        className="flex justify-around flex-wrap max-w-full max-h-full"
+        className="flex justify-around flex-wrap max-w-full max-h-full m-5"
         data-aos="fade-left"
         data-aos-offset="200"
         data-aos-delay="50"
