@@ -26,19 +26,20 @@ export default function Contato() {
     resolver: zodResolver(validacaoDeContatoSchema)
   })
 
-  function onSubmitEmail(data) {
+  async function onSubmitEmail(data) {
     const templateParams = {
       from_name: data.nome,
       from_email: data.email,
       message: data.mensagem,
-    }
-    emailjs.send("service_3nu36wu", "template_pxo1wuc", templateParams, "AqLuZzCqpb48hDAPj")
-    .then((response) => {
+    };
+  
+    try {
+      const response = await emailjs.send("service_3nu36wu", "template_pxo1wuc", templateParams, "AqLuZzCqpb48hDAPj");
       console.log('SUCCESS!', response.status, response.text);
-      reset()
-    }, (err) => {
+      reset();
+    } catch (err) {
       console.log('FAILED...', err);
-    })
+    }
   }
 
   return (
