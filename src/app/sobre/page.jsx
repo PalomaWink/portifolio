@@ -58,8 +58,8 @@ export default function Sobre() {
               <p className="text-lg text-black mt-2">Estou muito feliz para continuar minha evolução como desenvolvedora full-stack, trazendo minha paixão pela aprendizagem, resolução de problemas e dedicação para contribuir efetivamente em projetos desafiadores. Vamos construir o futuro da tecnologia juntos!</p>
             </div>
           </div>
-          <div className="order-2 md:order-2 ">
-            <Image src={minhaFoto} width={900} height={900} alt="Foto da Paloma Wink" />
+          <div className="order-2 md:order-2">
+            <Image src={minhaFoto} width={700} height={800} alt="Foto da Paloma Wink" />
           </div>
         </div>
       </section>

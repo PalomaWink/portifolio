@@ -16,7 +16,7 @@ export default function Footer() {
             <ButtonGitHub />
           </Link>
         </div>
-        <p className="text-sm"> &copy; 2023 feito com ❤️ por Paloma Wink </p>
+        <p className="text-sm"> &copy; 2024 feito com ❤️ por Paloma Wink </p>
       </div>
     </footer>
   )
