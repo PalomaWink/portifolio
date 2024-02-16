@@ -17,6 +17,9 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
+import css from "../../../public/tecnologias/css-3-svgrepo-com.svg";
+import vercel from '../../../public/tecnologias/vercel-fill-svgrepo-com.svg'
+import onlineStore from '../../../public/projetos/online-store.png'
 
 export const projectsData = [
   {
@@ -32,20 +35,22 @@ export const projectsData = [
       { name: "Node.JS", image: nodejs },
     ],
     githubUrl: "https://github.com/PalomaWink/Trybetunes",
+    deployUrl: "",
   },
   {
     title: "Frontend Online Store",
-    image: emBreve,
-    status: "Em desenvolvimento",
+    image: onlineStore,
     description: "Aplicação desenvolvida utilizando a api do Mercado Livre",
     technologies: [
       { name: "React", image: react },
-      { name: "Tailwind CSS", image: tailwind },
+      { name: "CSS3", image: css },
       { name: "JavaScript", image: javascript },
       { name: "EsLint", image: eslint },
       { name: "Node.JS", image: nodejs },
+      { name: "Vercel", image: vercel },
     ],
     githubUrl: "https://github.com/PalomaWink/FrontEnd-Online-Store",
+    deployUrl: "https://front-end-online-store-alpha.vercel.app",
   },
   {
     title: "TrybeWallet",
@@ -62,6 +67,7 @@ export const projectsData = [
       { name: "Testing Library", image: testingLibrary },
     ],
     githubUrl: "https://github.com/PalomaWink/TrybeWallet",
+    deployUrl: "",
   },
   {
     title: "React Testing Library",
@@ -72,6 +78,7 @@ export const projectsData = [
       { name: "Testing Library", image: testingLibrary },
     ],
     githubUrl: "https://github.com/PalomaWink/React-Testing-Library",
+    deployUrl: "",
   },
   {
     title: "Star Wars Planets Search",
@@ -87,6 +94,7 @@ export const projectsData = [
       { name: "Testing Library", image: testingLibrary },
     ],
     githubUrl: "https://github.com/PalomaWink/StarWars-Planets-Search",
+    deployUrl: "",
   },
   {
     title: "App de Receitas",
@@ -102,6 +110,7 @@ export const projectsData = [
       { name: "Testing Library", image: testingLibrary },
     ],
     githubUrl: "https://github.com/PalomaWink/Recipes-App",
+    deployUrl: "",
   },
   {
     title: "Trivia",
@@ -117,6 +126,7 @@ export const projectsData = [
       { name: "Testing Library", image: testingLibrary },
     ],
     githubUrl: "https://github.com/PalomaWink/Trivia",
+    deployUrl: "",
   },
   {
     title: "Store Manager",
@@ -134,5 +144,6 @@ export const projectsData = [
       { name: "Sinon", image: sinon },
     ],
     githubUrl: "https://github.com/PalomaWink/Store-Manager",
+    deployUrl: "",
   },
 ];

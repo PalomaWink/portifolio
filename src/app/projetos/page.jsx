@@ -1,7 +1,7 @@
 "use client"
 // Components
 import { useEffect } from "react";
-import { projectsData } from "../data/tecnologias";
+import { projectsData } from "../data/projectList";
 import ProjectCard from "../components/ProjectCard";
 
 //CSS

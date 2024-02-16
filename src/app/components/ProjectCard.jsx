@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TfiGithub } from "react-icons/tfi";
+import { AiOutlineGlobal } from "react-icons/ai";
+
 
 export default function ProjectCard({ project }) {
   return (
@@ -24,9 +26,12 @@ export default function ProjectCard({ project }) {
             </div>
           ))}
         </div>
-        <div className="absolute bottom-4 right-4">
-          <Link href={project.githubUrl} target="_blank">
+        <div className="absolute bottom-4 right-4 flex">
+          <Link href={project.githubUrl} target="_blank" className="mr-2">
             <TfiGithub size={40} />
+          </Link>
+          <Link href={project.deployUrl} target="_blank">
+            <AiOutlineGlobal size={40} />
           </Link>
         </div>
       </div>
