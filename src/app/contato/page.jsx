@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from "react-google-recaptcha"
 
 
 const validacaoDeContatoSchema = z.object({
@@ -16,7 +17,6 @@ const validacaoDeContatoSchema = z.object({
   mensagem: z.string().min(3, 'O campo da mensagem é obrigatorio').max(255),
 })
 export default function Contato() {
-
   const { 
     register,
     reset,
@@ -25,6 +25,8 @@ export default function Contato() {
   } = useForm({
     resolver: zodResolver(validacaoDeContatoSchema)
   })
+
+  const [capVal, setCapVal] = useState(null)
 
   async function onSubmitEmail(data) {
     const templateParams = {
@@ -80,9 +82,15 @@ export default function Contato() {
           />
           {errors.mensagem && <span className="text-red-600 text-sm">{errors.mensagem.message}</span>}
         </div>
-        <div className="ml-6 pl-6 mt-10">
-          <button className="button" type="submit">
+        <div className="ml-6 pl-6 mt-10 flex flex-col items-center">
+          <ReCAPTCHA 
+          sitekey='6LervXUpAAAAABCIgugyB--Td3ukF6gse31Clziz'
+          onChange={val => setCapVal(val)}
+          className="mb-4"
+          />
+          <button className="button" type="submit" disabled={!capVal}>
             Enviar :)
+          </button>
           <style jsx>{`
             .button {
               --bg: #000;
@@ -95,11 +103,13 @@ export default function Contato() {
               background: var(--bg);
               transition: 0.2s;
               max-width: 100%;
+              cursor: pointer;
+              opacity: 0.5;
             }
 
             .button:hover {
               color: var(--hover-text);
-              transform: translate(-0.25rem,-0.25rem);
+              transform: translate(-0.25rem, -0.25rem);
               background: var(--hover-bg);
               box-shadow: 0.25rem 0.25rem var(--bg);
             }
@@ -108,8 +118,16 @@ export default function Contato() {
               transform: translate(0);
               box-shadow: none;
             }
+
+            .button:disabled {
+              cursor: not-allowed;
+              opacity: 0.5;
+            }
+
+            .button:not(:disabled) {
+              opacity: 1;
+            }
           `}</style>
-          </button>
         </div>
       </form>
     </div>
