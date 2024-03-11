@@ -25,6 +25,9 @@ module.exports = {
         'verde-claro': '#80D8DA',
         'rosa-pessego': '#F8B7B7',
       },
+      borderRadius: {
+        '4xl': '6rem',
+      },
     },
   },
   plugins: [],
