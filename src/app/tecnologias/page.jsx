@@ -18,13 +18,13 @@ import jwt from '../../../public/tecnologias/icons8-jwt-480.svg'
 import chai from '../../../public/tecnologias/chai-seeklogo.com.svg'
 import nodejs from '../../../public/tecnologias/icons8-node-js.svg'
 import sinon from '../../../public/tecnologias/sinonJS.png'
-import nest from '../../../public/tecnologias/nestjs-svgrepo-com.svg'
 import csharp from '../../../public/tecnologias/csharp-svgrepo-com.svg'
 import dotNet from '../../../public/tecnologias/dot-net-svgrepo-com.svg'
 import git from '../../../public/tecnologias/git-icon-svgrepo-com.svg'
 import gitHub from '../../../public/tecnologias/github-octocat-svgrepo-com.svg'
 import postman from '../../../public/tecnologias/postman-icon-svgrepo-com.svg'
 import sass from '../../../public/tecnologias/sass-svgrepo-com.svg'
+import astro from '../../../public/tecnologias/astro.svg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -56,7 +56,7 @@ export default function Tecnologias() {
     {src: chai, alt: "Chai"},
     {src: nodejs, alt: "Node.JS"},
     {src: sinon, alt: "Sinon"},
-    {src: nest, alt: "Nest.JS"},
+    {src: astro, alt: "Astro Framework"}
   ]
   
   const fourthBlock = [

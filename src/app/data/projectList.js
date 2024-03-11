@@ -1,4 +1,4 @@
-import emBreve from "../../../public/em_breve.png";
+import emBreve from "../../../public/em_breve.webp";
 import react from '../../../public/tecnologias/react-logo-svgrepo-com.svg'
 import nextjs from '../../../public/tecnologias/next-js-svgrepo-com.svg'
 import typescript from '../../../public/tecnologias/typescript-icon-svgrepo-com.svg'
